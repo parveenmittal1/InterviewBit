@@ -1,5 +1,5 @@
 class ReverseTheString{
-    private void reverseString(String []array){
+    private static void reverseString(String[] array){
         int i=0;
         int j=array.length-1;
         String temp="";
@@ -9,7 +9,7 @@ class ReverseTheString{
       array[j] = temp;
 }
     }
-    public String solve(String A) {
+    public static String solve(String A) {
 
         String [] array=A.split(" ");
         for(int i=0;i<array.length;i++){
