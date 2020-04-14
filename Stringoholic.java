@@ -6,6 +6,7 @@ import java.util.List;
 
 
 class Stringoholic{
+    ////will give the number of operation to get same string again
     private static long reverseNum(String a){
         String temp=a;
         long count=0;
@@ -16,9 +17,6 @@ class Stringoholic{
         i++;
         count++;
         while(!temp.equals(a)){
-            if(i>a.length()){
-                return -1;
-            }
             count++;
             subA=a.substring(0,i);
             subB=a.substring(i,a.length());
@@ -33,7 +31,6 @@ class Stringoholic{
             return b;
         return gcd(b % a, a);
     }
-
     // method to return LCM of two numbers
     static long lcm(long a, long b)
     {
@@ -47,7 +44,6 @@ class Stringoholic{
             }
         return lcm;
     }
-
     public static long  solve(List<String> A) {
         List<Long> temp = new ArrayList();
         for (int i = 0; i < A.size(); i++) {
@@ -61,40 +57,9 @@ class Stringoholic{
     public static void main(String[] args) {
     //
       List<String> a=new ArrayList<>();
-      a.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-      a.add("babaaaabbaba");
-      a.add("baaaaababaabbaaaaabbbbbbbaabbaaaababbabaababaabaaabbbaaaaa");
-      a.add("abaabb");
-      a.add("aababbbbabbaaaabbaaaaaaaababbbabbbbaabbaabaabbaabaababbbababaababaabbababaaabaaaab");
-      a.add("babaaaaababbbbbabbbbabbaaabaaaababbabbaabbbabbaaaabbbabaaaabaaaababb");
-      a.add("bbbbbbaaaaaabbbbbbababaabaabbbbbaaabbabbaabbbbaaaaaababbabaaabbabbabbbabbaabbabbbbaabbbaaaaabbabaaab");
-      a.add("aabaaabaabbbbababbabbabaaaababbababbbabbbbaabbaaaaababbbbbababbbbaaababababab");
-      a.add("aaaababbbaabbbabaabb");
-      a.add("ababaaaabbabbbbaaabbababbbabbbabaaa");
-      a.add("aaabaabbbabaa");
-      a.add("baababbababbbbbabbabaabbabbbbbaaaabaaaababaa");
-      a.add("babaa");
-      a.add("abbabababbbbbbbbbbbaaaaaababbababaaabbbaaaabbbababbabaabbaabbbbaabbbaabbababababaabaaabbaaabbba");
-      a.add("ababbaabbaaabbbabaabababbbabaaabbbaababaaa");
-      a.add("abbaaaababbbbaaabaaaabaaaaabaababbabbaababbbabbbbbbbbbabbaabaaabbaaababbbaa");
-      a.add("bbabababaabbabbabbbabbaababbabaaabbbababab");
-      a.add("abbbaaabaab");
-      a.add("bbaaabbaaabbaabbabababa");
-      a.add("aabaabaaaaaaabaabbbaaababbbbbbababbaabababbaaaaabbabbbabbbaababbaabababbbbbbbbbaabaab");
-      a.add("babbaaabbabbaabaaabbb");
-      a.add("bbabaabba");
-      a.add("baabaaaaabbaaaaaabbbbaaaabababa");
-      a.add("babbaababaaba");
-      a.add("baabaabaabbababbaabbabbbbbabaaaabbbbbabbabbbbbabbbabaabbbbabbbbaaabbbbabababaaaababbaaabbabb");
-      a.add("abbbbaaaabaabbabbaababaabbababbbaaabbabbbbbaaabbabbaabbb");
-      a.add("bababaaaaabababbabbaabababbbaabbaabaabaabbabbbababbaaabababbababbbb");
-      a.add("abaaabbbabbbaabba");
-      a.add("bbbbaaaabbbababaabbbababaaaababbaaaaaabbbabbaababababbba");
-      a.add("bababaabaaaabbaabbababbaabbaabaabbaaaaaaaababbaaaaaabbaaabaabaaababbababbbbaabbabbabaabab");
-      a.add("aabbbabaaabababaabbbbaabbabaaabbbaaabbabbbbabaabbbbaabbbaaaaabbbabbbbb");
-      a.add("aabbbbbbabaabbbabbaababbababaabaaababbbbabbbaababaaaabbaaabaaabaaaabbbabababbab");
-      a.add("abaaaaababbabaabbbaaaaabbaaaabaaaaaaaababbaabbbaabbabbbabbaaaaaab");
-      a.add("bbbaabbabbbbbbaaaabbabbbbbbbaaabaababbaaaabbbaababbaaabbbbbbbbabbabababbaaabaabaaabaaaabbbbbabaabaaa");
+      a.add("a");
+      a.add("abab");
+      a.add("abba");
       System.out.println(solve(a));
   }
 }
