@@ -6,9 +6,9 @@ import java.util.List;
 
 
 class Stringoholic{
-    private static int reverseNum(String a){
+    private static long reverseNum(String a){
         String temp=a;
-        int count=0;
+        long count=0;
         int i=1;
         String subA=a.substring(0,i);
         String subB=a.substring(i,a.length());
@@ -27,7 +27,7 @@ class Stringoholic{
         }
         return  count;
     }
-    static int gcd(int a, int b)
+    static long gcd(long a, long b)
     {
         if (a == 0)
             return b;
@@ -35,23 +35,23 @@ class Stringoholic{
     }
 
     // method to return LCM of two numbers
-    static int lcm(int a, int b)
+    static long lcm(long a, long b)
     {
         return (a*b)/gcd(a, b);
     }
 
-    private static int findLcm(List<Integer> temp) {
-        int lcm=lcm(temp.get(0),temp.get(1));
+    private static long findLcm(List<Long> temp) {
+        long lcm=lcm(temp.get(0),temp.get(1));
         for(int i = 2; i<temp.size(); i++) {
             lcm=lcm(lcm,temp.get(i));
             }
         return lcm;
     }
 
-    public static int solve(List<String> A) {
-        List<Integer> temp = new ArrayList();
+    public static long  solve(List<String> A) {
+        List<Long> temp = new ArrayList();
         for (int i = 0; i < A.size(); i++) {
-            temp.add(reverseNum(A.get(i)));
+            temp.add((long) reverseNum(A.get(i)));
             System.out.println(temp.get(i));
         }
         Collections.sort(temp);
@@ -95,6 +95,6 @@ class Stringoholic{
       a.add("aabbbbbbabaabbbabbaababbababaabaaababbbbabbbaababaaaabbaaabaaabaaaabbbabababbab");
       a.add("abaaaaababbabaabbbaaaaabbaaaabaaaaaaaababbaabbbaabbabbbabbaaaaaab");
       a.add("bbbaabbabbbbbbaaaabbabbbbbbbaaabaababbaaaabbbaababbaaabbbbbbbbabbabababbaaabaabaaabaaaabbbbbabaabaaa");
-      System.out.println((a));
+      System.out.println(solve(a));
   }
 }
